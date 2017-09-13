@@ -1,0 +1,20 @@
+.label{
+    color: gray;
+    font-size: 25px;
+    font-family: "Arial";
+
+
+}
+
+.caixa{
+
+
+    border: 1px solid black;
+
+}
+
+.area{
+
+    width:350px;
+    height: 100px;
+}
