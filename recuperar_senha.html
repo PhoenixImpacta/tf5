@@ -6,7 +6,7 @@
     <title>Recuperar Senha</title>
 </head>
 <body>
-    <form>
+    <form name="recuperar_senha" method="post" action="" id="form_recu_senha" onsubmit="return validarSenha();">
         <fieldset>
             <legend>Recuperar Senha</legend>
 
@@ -22,7 +22,7 @@
 
             <div class="form-group">
                 <label for="txtConfirmarSenha">Confirmar senha:</label>
-                <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha" class="input-control" oninput="validarSenha(this)" required />
+                <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha" class="input-control" required />
             </div>
 
             <div class="form-group">
@@ -33,12 +33,16 @@
     </form>
 
     <script>
-        function validarSenha(input) {
-            if(input.value != document.getElementById('txtSenha').value){
-                input.setCustomValidity('As senhas n„o conferem!');
-            }else{
-                input.setCustomValidity('');
-            }
+        function validarSenha() {
+           nova_senha = document.getElementById('txtSenha').value;
+           confirma_senha = document.getElementById('txtConfirmarSenha').value;
+
+           if(confirma_senha != nova_senha){
+               alert("As senhas n√£o conferem!");
+               return false;
+           }
+
+           return true;
         }
     </script>
 </body>
