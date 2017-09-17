@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<title>Cadastro</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+   <style>
+       
+    
+    
+    .forma{
+           display:flex;
+           
+           justify-content: center;
+           flex-wrap: wrap;
+           font-family: sans-serif;
+           
+           
+           
+     }
+       legend{
+           font-size: 2em;
+           margin-bottom: 1em;
+           
+       }
+      
+       input{
+           width: auto;
+           background-color: #c9d8c5;
+           transition: 0.5s;
+           border: 0.1em;
+           height: 1.5em;
+           margin-bottom: 1em;
+           margin-left: 1em;
+           
+       }
+       input:hover{
+        background-color: #a8b6bf;
+    }
+       input[type=radio]{
+           margin-bottom: 0em;
+           width:1em;
+       }
+       .sexo{
+           display: flex;
+           margin-left: 25%;
+           align-items: flex-end;
+           margin-bottom: 2em;
+           
+           
+       }
+       .caixa{
+           display: flex;
+           justify-content: flex-end;
+           margin-left: -15%;
+           
+           width: 30em;
+           
+       }
+    .papel{
+        background: url("cadastro.png");
+        background-repeat: no-repeat; 
+        background-size: 50%;
+        background-position-x: 21em;
+        background-position-y: 15em;
+    }
+    body{
+        background-color: #f2efe8
+    }
+    #botoes{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .botoes button{
+        margin: 0.2em;
+        margin-left: 3em;
+        margin-right: 3em;
+        cursor: pointer;
+        font-size: 1.5em;
+        font-family: arial ;
+        border: 0px;
+        
+          
+    }
+    .dropbtn {
+        display:flex;
+        background-color: #4CAF50;
+        color: white;
+        font-family: verdana;
+        padding: auto;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        height:2em;
+        
+        
+        
+        
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #3e8e41;
+    }
+
+
+    .menu{
+        display: block;
+        top:0em;
+        right:0em;
+        height:2em;
+        background-color: #4CAF50;
+        width: 100%;
+        position: fixed;
+        
+        
+
+    }
+    .dropdown {
+        width: 100%;    
+           
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+       
+    .dropdown-content a {
+        color: black;
+        font-family: verdana;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        
+    }
+    
+    .dropdown a:hover {background-color: #f1f1f1}
+    
+    .show {display:block;}
+    </style>
+    </head>
+    <body>
+
+   </style>
+
+   <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Fecha o dropdown se clicar fora 
+        
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+}
+    </script>
+
+</head>
+
+
+
+
+
+
+
+<body>
+    <!---Menu-->
+<div class="menu">
+<div class="dropdown">
+    <button onClick="myFunction()" class="dropbtn">Menu</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#">Login</a>
+        <a href="#">Esqueci a senha</a>
+        <a href="#">Novo Cadastro</a>
+        <a href="#">Nova Disciplina</a>
+        <a href="#">Contato</a>
+    </div>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+    <!--Formulário-->
+    
+    <form action="novoCliente">
+            <div class="forma">       
+           
+        <fieldset>
+                
+         <legend>Cadastro</legend>
+         
+                <div class="papel">
+
+       
+        <!--Nome-->
+        
+        
+        <div class="caixa">
+
+        <label for="primeiroNome">Primeiro nome:</label>
+        <input type="text" name="primeiroNome"  id="primeiroNome" maxlength="15" required >
+
+        </div>
+         <div class="caixa">
+
+        <!--Sobrenome-->
+        <label for="Sobrenome">Sobrenome:</label>
+        <input type="text" name="Sobrenome" id="Sobrenome"  maxlength="25" required>
+
+        </div>
+
+        
+        <!--Sexo-->   
+
+        <div class="sexo">
+        <label for="sexo" >Sexo:</label><br/>  
+
+        
+        <input type="radio" name="sexo" value="Masculino" id="Masc">
+        <label for="Masc">Masculino</label> 
+     
+       
+        <input type="radio" name="sexo" value="Feminino" id="Fem">
+        <label for="Fem">Feminino</label> 
+        </div>
+
+        
+
+        
+
+        <!--Nascimento-->
+        
+        <div class="caixa">
+        <label for="Nascimento">Nascimento:</label>
+        <input type="date" name="Nascimento" id="Nascimento" style="width:12.5em">
+        </div>
+        
+        <div class="caixa">
+        <!--RA-->
+        <label for="RA">RA:</label>
+        <input type="number" name="RA" id="RA" max="1700054" min="1111111" required style="width:12.5em">
+        </div>
+
+        
+        <!--Email-->
+        <div class="caixa">
+
+        <label for="Email">Email:</label>
+        <input type="email" name="Email" id="Email" required>
+
+        </div>
+
+       
+        <!--Telefone-->
+        <div class="caixa">
+        <label for="Telefone">Telefone:</label>
+        <input type="tel" name="Telefone" id="Telefone" maxlength="11">
+        </div>
+        <!--Curso-->
+        <div class="caixa">
+                <label for="Curso">Curso:</label>
+                <select name="curso" id="curso" required >
+                
+                <option value="">
+                    --Selecione um curso--                  
+                </option> 
+                <option value="ADS">
+                        Analise de Sistemas                   
+                </option> 
+                <option value="GT">
+                        Gestão de TI                   
+                </option> 
+
+                <option value="PG">
+                    Processos Gerenciais                    
+                </option> 
+                <option value="PM">
+                        Produção Multimidia                    
+                </option> 
+                <option value="Direito">
+                       Direito                   
+                </option> 
+                <option value="Administração">
+                        Administração                   
+                </option>
+                <option value="Jogos Digitais">
+                       Jogos Digitais                    
+                </option> 
+            </select>  
+
+                </div>
+                <br/> 
+        
+        <!--Senha-->
+        <div class="caixa">
+        <label for="senha">Digite sua senha:</label>
+        <input type="password" name="senha" id="senha" required>
+        </div>
+        
+        <!--Confirmar Senha-->
+        <div class="caixa">
+        <label for="senha">Confirme a senha:</label>
+        <input type="password" name="senha" id="senha" required>
+        </div>
+        <!--Botão-->
+
+    </div>
+
+        </fieldset>
+    
+    
+    <!--Endereço-->
+            <fieldset>
+    
+
+             <legend>Endereço</legend>
+
+    <!--Cidade-->
+
+             <div class="caixa">
+                    <label for="Estado">Estado:</label>
+                    <input type="text" name="Estado" id="Estado"></input>
+                </div>
+
+    <!--Estado-->
+
+                <div class="caixa">
+                        <label for="Cidade">Cidade:</label>
+                        <input type="text" name="Cidade" id="Cidade"></input>
+                    </div>
+
+   <!--Bairro-->
+
+                    <div class="caixa">
+                            <label for="Bairro">Bairro:</label>
+                            <input type="text" name="Bairro" id="Bairro"></input>
+                        </div>
+
+
+    <!--Rua, av-->
+             <div class="caixa">
+                    <label for="local"><select id="end"required>
+                        <option value="">
+                          --Endereço--
+                        </option>
+                        <option value="R">
+                            Rua
+                        </option>
+                        <option value="A">
+                            Avenida
+                        </option>
+                    </select></label>
+                    <input type="text" name="local" id="local" required>
+                    <input type="number" name="numero" id=numero required style="width:4em">
+                    </div>
+
+
+            
+                   
+            </fieldset>
+            <br/>
+
+        </div>   
+<div id="botoes">
+    <div class="botoes">        
+    <button type="submit">Enviar</button> 
+    </div>
+    <div class="botoes">    
+    <button type="reset">Limpar</button>
+    </div>
+</div>
+</form>
+
+</body>
