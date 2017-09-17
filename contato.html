@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" type="text/css" href="contatostilo.css">
+    
+ <!--JS-->   
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Fecha o dropdown se clicar fora 
+        
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+}
+    </script>
+</head>
+
+
+
+
+
+
+<body>
+
+
+     <!---Menu-->
+<div class="menu">
+        <div class="dropdown">
+            <button onClick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Login</a>
+                <a href="#">Esqueci a senha</a>
+                <a href="tecweb.html">Novo Cadastro</a>
+                <a href="#">Nova Disciplina</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+<div class="caixa">        
+<form>
+        
+    <fieldset>
+        <div class="fundo"> 
+        <legend>
+            Contato
+        </legend>
+        
+   
+    <label for="email">Email</label>
+        
+    <input id="email" type="email" class="caixa" required>
+        
+        <label for="name">Nome</label>
+        </br>
+    <input id="name" type="text">
+
+</br></br>
+    Assunto:
+    <select required>
+        <option value="">--Selecione--</option>
+        <option value="Tec">Tecnologia</option>
+        <option value="Red">Redes</option>
+        <option value="Goo">Google</option>
+
+    </select>
+    </br></br>
+    <hr>
+    <label for="mensagem">Mensagem</label>
+    </br></br>
+    <textarea id="mensagem" name="mensagem" class="area" style="height: 8em ; font-family:sans-serif" 
+    maxlength="550"></textarea>
+</br></br>
+</fieldset>
+<div id="botoes">
+    <div class="botoes">
+    <button type="submit" >ENVIAR</button>
+    </div>
+    <div class="botoes">
+    <button type="reset" >LIMPAR</button>
+    </div>
+</div>
+</div>
+</form>
+</div>
+
+
+
+
+
+
+</body>
+</html>
