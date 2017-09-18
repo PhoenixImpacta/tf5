@@ -141,11 +141,13 @@
         display: block;
         
     }
+    .show {display:block;}
+    .dropdown a:hover {background-color: #f1f1f1}
     
     
     
     
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 700px){
         body{
             overflow-x: hidden;
         }
@@ -155,6 +157,9 @@
         margin-left: auto;
         width: 100%;
         
+    }
+    fieldset{
+        width:100%;
     }
     
     .ende {
@@ -170,7 +175,7 @@
     select {
         
         display: flex;
-        width:20em;
+        
         
         justify-content: flex-start;
 
@@ -190,7 +195,7 @@
     .show {display:block;}
     </style>
     </head>
-    <body>
+    
 
    <script>
         function myFunction() {
@@ -227,11 +232,11 @@
 <div class="dropdown">
     <button onClick="myFunction()" class="dropbtn">Menu</button>
     <div id="myDropdown" class="dropdown-content">
-        <a href="#">Login</a>
-        <a href="#">Esqueci a senha</a>
-        <a href="tecweb.html">Novo Cadastro</a>
-        <a href="#">Nova Disciplina</a>
-        <a href="contato.html">Contato</a>
+            <a href="#">Login</a>
+            <a href="recuperar_senha.html">Esqueci a senha</a>
+            <a href="tecweb.html">Novo Cadastro</a>
+            <a href="#">Nova Disciplina</a>
+            <a href="contato.html">Contato</a>
     </div>
 </div>
 </div>

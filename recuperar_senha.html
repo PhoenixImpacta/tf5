@@ -2,11 +2,66 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/recuperar_senha.css">
+    <link rel="stylesheet" type="text/css" href="./css/recuperar_senha.css">
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Recuperar Senha</title>
+
+
+
+    <script>
+            function validarSenha(input) {
+                if(input.value != document.getElementById('txtSenha').value){
+                    input.setCustomValidity('As senhas nao conferem!');
+                }else{
+                    input.setCustomValidity('');
+                }
+            }
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            // Fecha o dropdown se clicar fora 
+            
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+      
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+    }
+        
+          
+            </script>
+
+   
+
+
 </head>
 <body>
-    <form name="recuperar_senha" method="post" action="" id="form_recu_senha" onsubmit="return validarSenha();">
+   <!---Menu-->
+   <div class="menu">
+        <div class="dropdown">
+            <button onClick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Login</a>
+                    <a href="recuperar_senha.html">Esqueci a senha</a>
+                    <a href="tecweb.html">Novo Cadastro</a>
+                    <a href="#">Nova Disciplina</a>
+                    <a href="contato.html">Contato</a>
+            </div>
+        </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+    <form>
         <fieldset>
             <legend>Recuperar Senha</legend>
 
@@ -22,7 +77,7 @@
 
             <div class="form-group">
                 <label for="txtConfirmarSenha">Confirmar senha:</label>
-                <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha" class="input-control" required />
+                <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha" class="input-control" oninput="validarSenha(this)" required />
             </div>
 
             <div class="form-group">
@@ -32,18 +87,6 @@
         </fieldset>
     </form>
 
-    <script>
-        function validarSenha() {
-           nova_senha = document.getElementById('txtSenha').value;
-           confirma_senha = document.getElementById('txtConfirmarSenha').value;
 
-           if(confirma_senha != nova_senha){
-               alert("As senhas não conferem!");
-               return false;
-           }
-
-           return true;
-        }
-    </script>
 </body>
 </html>
