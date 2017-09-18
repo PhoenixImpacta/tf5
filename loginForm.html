@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title>Formulario de Login</title>
+    <link href="./css/css_LoginForm.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    
+    <script>
+        function validarSenha(input) {
+            if(input.value != document.getElementById('txtSenha').value){
+                input.setCustomValidity('As senhas nao conferem!');
+            }else{
+                input.setCustomValidity('');
+            }
+        }
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Fecha o dropdown se clicar fora 
+        
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+}
+    
+      
+        </script>
+</head>
+<body>
+
+
+     <!---Menu-->
+<div class="menu">
+        <div class="dropdown">
+            <button onClick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                    <a href="loginForm.html">Login</a>
+                    <a href="recuperar_senha.html">Esqueci a senha</a>
+                    <a href="tecweb.html">Novo Cadastro</a>
+                    <a href="#">Nova Disciplina</a>
+                    <a href="contato.html">Contato</a>
+            </div>
+        </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+            <!--Formulário-->
+
+
+<div class="loginForm">
+    <form name="loginForm">
+        <fieldset>
+            
+                <legend> Login  </legend><br/>
+            
+            <div class="caixa">
+            <label for="email">Email</label> 
+            <input id="email" type="email"required <br/> <br/> <br/>
+            </div>
+            <div class="caixa">    
+            <label for="nome">Nome</label> 
+            <input type="text" required><br/><br/>
+            </div>
+
+            <div class="alinhar">
+            Lembrar os dados ? <input type="checkbox"> <br/>  <br/> <br/>
+            </div>
+            <div class="botao">
+            <button>EFETUAR LOGIN</button>
+            <button type="reset" >ESQUECI MINHA SENHA</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+</body>
+</html>
