@@ -1,11 +1,10 @@
 body{
     background-color: #f2efe8;
     font-family: sans-serif;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;    
 }
 form{
-    width: 90%;
+    width: 80%;
 }
 .caixa{
     display:flex;
@@ -126,28 +125,24 @@ legend{
 .are{
     font-family:sans-serif;
 }
+fieldset{
+    display: flex;
+        
+    margin-left: 0em;
+}
 
 
-@media only screen and (max-width: 600px){
-    body{
-        overflow-x: hidden;
+@media only screen and (max-width: 700px){
+
+    fieldset{
+        margin-left: -1em;
+        width: 100%;
+       
     }
     .caixa{
-    
-    justify-content: center;
-    margin-left: 0em;
-    height:5em;
-}
-    
-    
-    form{
-        width: 100%;
-        margin-left: 0em;
-    }
-    fieldset{
-        display: flex;
+        display:flex;
+        
         justify-content: center;
-        width:92%;
-        margin-left: 0em;
+        
     }
 }
