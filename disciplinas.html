@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/disciplinas.css">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+
+    <script>
+            
+            
+            
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            // Fecha o dropdown se clicar fora 
+            
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+      
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+    }
+        </script>
+<head/>
+
+
+<body>
+        <div class="menu">
+                <div class="dropdown">
+                    <button onClick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                            <a href="loginForm.html">Login</a>
+                            <a href="recuperar_senha.html">Esqueci a senha</a>
+                            <a href="tecweb.html">Novo Cadastro</a>
+                            <a href="disciplinas.html">Nova Disciplina</a>
+                            <a href="contato.html">Contato</a>
+                    </div>
+                </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+        
+
+    <form>
+    <div class="forma">
+    <fieldset>
+    
+    <legend>Disciplina</legend>
+    <!--Nome-->
+    
+    <div class="caixa">
+    <label for="name">Nome do Professor:</label>
+    <input type="text" id="name" required></br></br>
+    </div>
+
+    <!--Horas mensais-->
+    <div class="caixa">
+    <label for="horas"> Carga de horas:</label>
+    <input type="time" id="horas" required> </br></br>
+    </div>
+
+    <!--duração da aula-->
+    <div class="caixa">
+    <label for="duracao">Duracao da Aula:</label>
+    <input type="time" id="duracao" required></br></br>
+    </div>
+
+    <!--dia da semana-->
+    <div  class="caixa">
+    <label for="dia"> Dia da Semana:</label>
+    <select id="dia" required></br></br>
+        <option></option>
+        
+        <option value="Segunda">Segunda-feira</option>
+        <option value="Terca">Terça-feira</option>
+        <option value="Quarta">Quarta-feira</option>
+        <option value="Quinta">Quinta-feira</option>
+        <option value="Sexta">Sexta-feira</option>
+        <option value="Sabado">Sabado</option>
+        <option value="Domingo">Domingo</option>
+    </select>
+    
+    </div>
+    <br/>
+
+    <!--ementa-->
+    <div class="caixa">
+    <label for="ementa">Ementa:</label>
+    <textarea id="ementa" placeholder="Digite aqui..."></textarea>
+    </div>     
+    </fieldset>
+</div>
+
+    <!--botoes-->
+<div class="button">
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+</div>
+    </form>
+
+
+
+<body/>   
+
+
+
+<html/>
